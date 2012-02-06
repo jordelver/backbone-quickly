@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62%;
+}
+
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#search {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.6em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  list-style: none;
+  margin-right: 10px;
+}
+
+li a {
+  display: block;
+  border: 5px solid #eee;
+}
+</style>
+
+</head>
+<body>
+
+<script id="imageTemplate" type="text/html">
+  <a href="javascript: void(0)">
+    <img src="http://flickholdr.com/110/110/{{model.term}}/{{model.offset}}" />
+  </a>
+</script>
+
+<div id="container">
+  <h1>Backbone Quickly</h1>
+
+  <div id="favourites">
+    <h2>Favourites</h2>
+    <ul></ul>
+  </div>
+
+  <input type="text" id="search" />
+
+  <div id="search-results">
+    <h2>Search Results</h2>
+    <ul></ul>
+  </div>
+
+</div>
+
+<script src="lib/zepto.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone-min.js"></script>
+<script src="config.js"></script>
+<script src="application.js"></script>
+
+<script>
+App.start();
+</script>
+
+</body>
+</html>
